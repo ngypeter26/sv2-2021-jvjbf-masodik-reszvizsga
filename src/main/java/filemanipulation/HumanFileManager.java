@@ -21,7 +21,7 @@ public class HumanFileManager {
 
     public void writeMaleHumansToFile(Path path) {
         try {
-            Files.write(path, crateMaleLines());
+            Files.write(path, createMaleLines());
         } catch (IOException ioe) {
             throw new IllegalStateException("Can't write file!", ioe);
         }
@@ -41,7 +41,7 @@ public class HumanFileManager {
         }
     }
 
-    private List<String> crateMaleLines() {
+    private List<String> createMaleLines() {
         List<String> maleLines = new ArrayList<>();
         String str;
         for (Human human : humans) {
